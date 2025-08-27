@@ -4,12 +4,14 @@
 \f6\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red183\green111\blue179;
 \red71\green138\blue206;\red194\green125\blue100;\red193\green193\blue193;\red212\green213\blue153;\red141\green213\blue254;
-\red167\green197\blue151;\red203\green203\blue202;\red193\green193\blue193;\red0\green0\blue0;\red14\green14\blue14;
-}
+\red167\green197\blue151;\red203\green203\blue202;\red193\green193\blue193;\red0\green0\blue0;\red183\green111\blue179;
+\red24\green24\blue24;\red70\green137\blue204;\red194\green126\blue101;\red212\green214\blue154;\red202\green202\blue202;
+\red167\green197\blue152;\red14\green14\blue14;}
 {\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c77407\c52698\c75307;
 \cssrgb\c34146\c61677\c84338;\cssrgb\c80772\c56796\c46790;\cssrgb\c80176\c80176\c79976;\cssrgb\c86247\c86215\c66392;\cssrgb\c61545\c86704\c99884;
-\cssrgb\c71035\c80830\c65726;\cssrgb\c83320\c83320\c83112;\cssrgb\c80000\c80000\c80000;\cssrgb\c0\c0\c0;\cssrgb\c6700\c6700\c6700;
-}
+\cssrgb\c71035\c80830\c65726;\cssrgb\c83320\c83320\c83112;\cssrgb\c80000\c80000\c80000;\cssrgb\c0\c0\c0;\cssrgb\c77255\c52549\c75294;
+\cssrgb\c12157\c12157\c12157;\cssrgb\c33725\c61176\c83922;\cssrgb\c80784\c56863\c47059;\cssrgb\c86275\c86275\c66667;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c70980\c80784\c65882;\cssrgb\c6700\c6700\c6700;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww16600\viewh8300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
@@ -99,6 +101,31 @@ EX01\
 EX02\
 	.
 \f1\b0\fs26 How to do:\
+		
+\f2 \cf14 \cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 #include\cf16 \strokec16  \cf17 \strokec17 <unistd.h>\cf12 \cb1 \strokec12 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \
+\cf16 \cb15 \strokec16 void\cf12 \strokec12  \cf18 \strokec18 ft_print_alphabet\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf16 \strokec16 char\cf12 \strokec12  letter \cf19 \strokec19 =\cf12 \strokec12  \cf17 \strokec17 'z'\cf12 \strokec12 ;\cb1 \
+\cb15     \cf14 \strokec14 while\cf12 \strokec12  (letter \cf19 \strokec19 >=\cf12 \strokec12  \cf17 \strokec17 'a'\cf12 \strokec12 )\cb1 \
+\cb15     \{\cb1 \
+\cb15         \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf19 \strokec19 &\cf12 \strokec12 letter, \cf20 \strokec20 1\cf12 \strokec12 );\cb1 \
+\cb15         letter\cf19 \strokec19 --\cf12 \strokec12 ;\cb1 \
+\cb15     \}\cb1 \
+\cb15 \}\cb1 \
+\
+\
+\cf16 \cb15 \strokec16 int\cf12 \strokec12  \cf18 \strokec18 main\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf18 \strokec18 ft_print_alphabet\cf12 \strokec12 ();\cb1 \
+\cb15     \cf14 \strokec14 return\cf12 \strokec12  \cf20 \strokec20 0\cf12 \strokec12 ;\cb1 \
+\cb15 \}\cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
 	.Verification:\
 		\
@@ -109,6 +136,32 @@ EX02\
 EX03\
 	.
 \f1\b0\fs26 How to do:\
+		
+\f2 \cf14 \cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 #include\cf16 \strokec16  \cf17 \strokec17 <unistd.h>\cf12 \cb1 \strokec12 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \
+\cf16 \cb15 \strokec16 void\cf12 \strokec12  \cf18 \strokec18 ft_print_numbers\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf16 \strokec16 char\cf12 \strokec12  number \cf19 \strokec19 =\cf12 \strokec12  \cf17 \strokec17 '0'\cf12 \strokec12 ;\cb1 \
+\cb15     \cf14 \strokec14 while\cf12 \strokec12  (number \cf19 \strokec19 <=\cf12 \strokec12  \cf17 \strokec17 '9'\cf12 \strokec12 )\cb1 \
+\cb15     \{\cb1 \
+\cb15         \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf19 \strokec19 &\cf12 \strokec12 number, \cf20 \strokec20 1\cf12 \strokec12 );\cb1 \
+\cb15         number\cf19 \strokec19 ++\cf12 \strokec12 ;\cb1 \
+\cb15     \}\cb1 \
+\cb15 \}\cb1 \
+\
+\
+\
+\cf16 \cb15 \strokec16 int\cf12 \strokec12  \cf18 \strokec18 main\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf18 \strokec18 ft_print_numbers\cf12 \strokec12 ();\cb1 \
+\cb15     \cf14 \strokec14 return\cf12 \strokec12  \cf20 \strokec20 0\cf12 \strokec12 ;\cb1 \
+\cb15 \}\cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 	\
 	.Verification:\
 		\
@@ -153,31 +206,31 @@ EX07\
 \f1\b0\fs26 How to do:\
 		cat /etc/passwd | \\\
 		grep -v '^#' | \\ - 
-\f5\fs28 \cf14 remove coment\'e1rios.
+\f5\fs28 \cf21 remove coment\'e1rios.
 \f1\fs26 \cf0 \
 		awk 'NR%2==0' | \\ - 
-\f5\fs28 \cf14 pega apenas linhas pares.
+\f5\fs28 \cf21 pega apenas linhas pares.
 \f1\fs26 \cf0 \
 		cut -d':' -f1 | \\ - 
-\f5\fs28 \cf14  pega s\'f3 o login.
+\f5\fs28 \cf21  pega s\'f3 o login.
 \f1\fs26 \cf0 \
 		rev | \\ - 
-\f5\fs28 \cf14 inverte os logins.
+\f5\fs28 \cf21 inverte os logins.
 \f1\fs26 \cf0 \
 		sort -r | \\ - 
-\f5\fs28 \cf14 ordena por ordem alfab\'e9tica inversa.
+\f5\fs28 \cf21 ordena por ordem alfab\'e9tica inversa.
 \f1\fs26 \cf0 \
 		awk "NR >= $FT_LINE1 && NR <= $FT_LINE2" | \\ - 
-\f5\fs28 \cf14 seleciona o intervalo de linhas.
+\f5\fs28 \cf21 seleciona o intervalo de linhas.
 \f1\fs26 \cf0 \
 		paste -sd ',' | \\ - 
-\f5\fs28 \cf14  junta tudo numa linha.
+\f5\fs28 \cf21  junta tudo numa linha.
 \f1\fs26 \cf0 \
 		sed 's/,/, /g' | \\ - 
-\f5\fs28 \cf14 adiciona espa\'e7os ap\'f3s v\'edrgulas.
+\f5\fs28 \cf21 adiciona espa\'e7os ap\'f3s v\'edrgulas.
 \f1\fs26 \cf0 \
 		sed 's/$/./' - 
-\f5\fs28 \cf14 termina com ponto.
+\f5\fs28 \cf21 termina com ponto.
 \f1\fs26 \cf0 \
 	.Verification:\
 		./r_dwssap.sh\
@@ -190,21 +243,21 @@ EX08\
 \f1\b0\fs26 How to do:\
 		echo $FT_NBR1 + $FT_NBR2 | \\\
 tr "\\'\\\\\\"\\?\\!" "01234" | \\ - 
-\f5\fs28 \cf14 converte 
+\f5\fs28 \cf21 converte 
 \f6 FT_NBR1
 \f5  para base 5.
 \f1\fs26 \cf0 \
 tr "mrdoc" "01234" | \\ - 
-\f5\fs28 \cf14 converte 
+\f5\fs28 \cf21 converte 
 \f6 FT_NBR2
 \f5  para base 5.
 \f1\fs26 \cf0 \
 xargs echo "ibase=5;obase=13;" | \\ - 
-\f5\fs28 \cf14 realiza a soma usando base 5 e converte para base 13.
+\f5\fs28 \cf21 realiza a soma usando base 5 e converte para base 13.
 \f1\fs26 \cf0 \
 bc | \\\
 tr "0123456789ABC" "gtaio luSnemf" - 
-\f5\fs28 \cf14 converte para o alfabeto personalizado.
+\f5\fs28 \cf21 converte para o alfabeto personalizado.
 \f1\fs26 \cf0 \
 		\
 	.Verification:\
