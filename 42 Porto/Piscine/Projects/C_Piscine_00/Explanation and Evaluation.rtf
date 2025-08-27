@@ -1,14 +1,14 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2822
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
-\f3\fnil\fcharset0 .SFNS-Regular;\f4\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f5\froman\fcharset0 Times-Roman;
-}
+\f3\froman\fcharset0 Times-Roman;\f4\froman\fcharset0 Times-Bold;\f5\fnil\fcharset0 .SFNS-Regular;
+\f6\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red183\green111\blue179;
 \red71\green138\blue206;\red194\green125\blue100;\red193\green193\blue193;\red212\green213\blue153;\red141\green213\blue254;
-\red167\green197\blue151;\red203\green203\blue202;\red193\green193\blue193;\red14\green14\blue14;\red0\green0\blue0;
+\red167\green197\blue151;\red203\green203\blue202;\red193\green193\blue193;\red0\green0\blue0;\red14\green14\blue14;
 }
 {\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c77407\c52698\c75307;
 \cssrgb\c34146\c61677\c84338;\cssrgb\c80772\c56796\c46790;\cssrgb\c80176\c80176\c79976;\cssrgb\c86247\c86215\c66392;\cssrgb\c61545\c86704\c99884;
-\cssrgb\c71035\c80830\c65726;\cssrgb\c83320\c83320\c83112;\cssrgb\c80000\c80000\c80000;\cssrgb\c6700\c6700\c6700;\cssrgb\c0\c0\c0;
+\cssrgb\c71035\c80830\c65726;\cssrgb\c83320\c83320\c83112;\cssrgb\c80000\c80000\c80000;\cssrgb\c0\c0\c0;\cssrgb\c6700\c6700\c6700;
 }
 \paperw11900\paperh16840\margl1440\margr1440\vieww16600\viewh8300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
@@ -42,9 +42,10 @@
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 	\
 	.Verification:\
-	\
+		gcc -Wall -Wextra -Werror ft_putchar   - compilar\
+		./a.out\
 	.Result\
-		
+		letra que ta escrita
 \f0\b\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 EX01\
@@ -74,9 +75,22 @@ EX01\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+-
+\f3\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Um 
+\f4\b char
+\f3\b0  em C n\'e3o \'e9 \'93uma letra m\'e1gica\'94, ele \'e9 s\'f3 um 
+\f4\b n\'famero inteiro
+\f3\b0  de 1 byte que segue a 
+\f4\b tabela ASCII
+\f1\b0\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 		\
 	.Verification:\
-	\
+		gcc -Wall -Wextra -Werror  ft_print_alphabet.c   - compilar\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 		./a.out\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	\
 	.Result\
 		\
 
@@ -139,31 +153,31 @@ EX07\
 \f1\b0\fs26 How to do:\
 		cat /etc/passwd | \\\
 		grep -v '^#' | \\ - 
-\f3\fs28 \cf13 remove coment\'e1rios.
+\f5\fs28 \cf14 remove coment\'e1rios.
 \f1\fs26 \cf0 \
 		awk 'NR%2==0' | \\ - 
-\f3\fs28 \cf13 pega apenas linhas pares.
+\f5\fs28 \cf14 pega apenas linhas pares.
 \f1\fs26 \cf0 \
 		cut -d':' -f1 | \\ - 
-\f3\fs28 \cf13  pega s\'f3 o login.
+\f5\fs28 \cf14  pega s\'f3 o login.
 \f1\fs26 \cf0 \
 		rev | \\ - 
-\f3\fs28 \cf13 inverte os logins.
+\f5\fs28 \cf14 inverte os logins.
 \f1\fs26 \cf0 \
 		sort -r | \\ - 
-\f3\fs28 \cf13 ordena por ordem alfab\'e9tica inversa.
+\f5\fs28 \cf14 ordena por ordem alfab\'e9tica inversa.
 \f1\fs26 \cf0 \
 		awk "NR >= $FT_LINE1 && NR <= $FT_LINE2" | \\ - 
-\f3\fs28 \cf13 seleciona o intervalo de linhas.
+\f5\fs28 \cf14 seleciona o intervalo de linhas.
 \f1\fs26 \cf0 \
 		paste -sd ',' | \\ - 
-\f3\fs28 \cf13  junta tudo numa linha.
+\f5\fs28 \cf14  junta tudo numa linha.
 \f1\fs26 \cf0 \
 		sed 's/,/, /g' | \\ - 
-\f3\fs28 \cf13 adiciona espa\'e7os ap\'f3s v\'edrgulas.
+\f5\fs28 \cf14 adiciona espa\'e7os ap\'f3s v\'edrgulas.
 \f1\fs26 \cf0 \
 		sed 's/$/./' - 
-\f3\fs28 \cf13 termina com ponto.
+\f5\fs28 \cf14 termina com ponto.
 \f1\fs26 \cf0 \
 	.Verification:\
 		./r_dwssap.sh\
@@ -176,26 +190,26 @@ EX08\
 \f1\b0\fs26 How to do:\
 		echo $FT_NBR1 + $FT_NBR2 | \\\
 tr "\\'\\\\\\"\\?\\!" "01234" | \\ - 
-\f3\fs28 \cf13 converte 
-\f4 FT_NBR1
-\f3  para base 5.
+\f5\fs28 \cf14 converte 
+\f6 FT_NBR1
+\f5  para base 5.
 \f1\fs26 \cf0 \
 tr "mrdoc" "01234" | \\ - 
-\f3\fs28 \cf13 converte 
-\f4 FT_NBR2
-\f3  para base 5.
+\f5\fs28 \cf14 converte 
+\f6 FT_NBR2
+\f5  para base 5.
 \f1\fs26 \cf0 \
 xargs echo "ibase=5;obase=13;" | \\ - 
-\f3\fs28 \cf13 realiza a soma usando base 5 e converte para base 13.
+\f5\fs28 \cf14 realiza a soma usando base 5 e converte para base 13.
 \f1\fs26 \cf0 \
 bc | \\\
 tr "0123456789ABC" "gtaio luSnemf" - 
-\f3\fs28 \cf13 converte para o alfabeto personalizado.
+\f5\fs28 \cf14 converte para o alfabeto personalizado.
 \f1\fs26 \cf0 \
 		\
 	.Verification:\
 		
-\f5\fs24 \expnd0\expndtw0\kerning0
+\f3\fs24 \expnd0\expndtw0\kerning0
 export FT_NBR1="\\'\\"\\"\\'\\\\\\"\\'\\\\"\
 export FT_NBR2="rcrdmddd"
 \f1\fs26 \kerning1\expnd0\expndtw0 \
