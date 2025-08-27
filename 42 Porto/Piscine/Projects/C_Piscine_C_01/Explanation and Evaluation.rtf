@@ -60,6 +60,7 @@ int main(void)\
 \
 	\
 	.Result\
+		42\
 		
 \f0\b\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
@@ -104,15 +105,43 @@ EX01\
 \
 	\
 	.Result\
-		\
+		42\
 
 \f0\b\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 EX02\
 	.
 \f1\b0\fs26 How to do:\
+			
+\f2 \cf13 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 #include\cf15 \strokec15  \cf16 \strokec16 <unistd.h>\cf17 \cb1 \strokec17 \
+\pard\pardeftab720\partightenfactor0
+\cf13 \cb14 \strokec13 #include\cf15 \strokec15  \cf16 \strokec16 <stdio.h>\cf17 \cb1 \strokec17 \
+\
+\cf15 \cb14 \strokec15 void\cf17 \strokec17  \cf18 \strokec18 ft_swap\cf17 \strokec17 (\cf15 \strokec15 int\cf17 \strokec17  \cf19 \strokec19 *\cf20 \strokec20 a\cf17 \strokec17 , \cf15 \strokec15 int\cf17 \strokec17  \cf19 \strokec19 *\cf20 \strokec20 b\cf17 \strokec17 )\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \{\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf15 \strokec15 int\cf17 \strokec17  temp;\cf17 \cb1 \strokec17 \
+\
+\cf17 \cb14 \strokec17     temp \cf19 \strokec19 =\cf17 \strokec17  \cf19 \strokec19 *\cf17 \strokec17 a;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf19 \strokec19 *\cf17 \strokec17 a \cf19 \strokec19 =\cf17 \strokec17  \cf19 \strokec19 *\cf17 \strokec17 b;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf19 \strokec19 *\cf17 \strokec17 b \cf19 \strokec19 =\cf17 \strokec17  temp;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \}\cf17 \cb1 \strokec17 \
+\
+\cf15 \cb14 \strokec15 int\cf17 \strokec17  \cf18 \strokec18 main\cf17 \strokec17 (\cf15 \strokec15 void\cf17 \strokec17 )\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \{\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf15 \strokec15 int\cf17 \strokec17  a \cf19 \strokec19 =\cf17 \strokec17  \cf21 \strokec21 5\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf15 \strokec15 int\cf17 \strokec17  b \cf19 \strokec19 =\cf17 \strokec17  \cf21 \strokec21 10\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\
+\cf17 \cb14 \strokec17     \cf18 \strokec18 ft_swap\cf17 \strokec17 (\cf19 \strokec19 &\cf17 \strokec17 a, \cf19 \strokec19 &\cf17 \strokec17 b);\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf18 \strokec18 printf\cf17 \strokec17 (\cf16 \strokec16 "a: \cf20 \strokec20 %d\cf16 \strokec16 , b: \cf20 \strokec20 %d\cf22 \strokec22 \\n\cf16 \strokec16 "\cf17 \strokec17 , a, b);\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf13 \strokec13 return\cf17 \strokec17  \cf21 \strokec21 0\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \}\cf17 \cb1 \strokec17 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 	\
 	.Verification:\
+		cc -Wall -Wextra -Werror programa.c -o programa\
 		\
 	.Result\
 		
@@ -123,6 +152,7 @@ EX03\
 \f1\b0\fs26 How to do:\
 	\
 	.Verification:\
+		cc -Wall -Wextra -Werror programa.c -o programa\
 \
 	.Result\
 		
@@ -133,6 +163,7 @@ EX04\
 \f1\b0\fs26 How to do:\
 	\
 	.Verification:\
+		cc -Wall -Wextra -Werror programa.c -o programa\
 	\
 	.Result\
 		\
