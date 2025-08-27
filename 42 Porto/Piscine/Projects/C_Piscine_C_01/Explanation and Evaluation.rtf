@@ -1,16 +1,26 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2822
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
-}
+\f3\froman\fcharset0 Times-Roman;\f4\froman\fcharset0 Times-Bold;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red184\green111\blue179;
 \red72\green139\blue206;\red194\green125\blue100;\red193\green193\blue193;\red212\green213\blue153;\red203\green203\blue202;
 \red142\green213\blue255;\red0\green0\blue0;\red167\green197\blue151;\red183\green111\blue179;\red24\green24\blue24;
 \red70\green137\blue204;\red194\green126\blue101;\red193\green193\blue193;\red212\green214\blue154;\red202\green202\blue202;
-\red140\green211\blue254;\red167\green197\blue152;\red205\green173\blue106;}
+\red140\green211\blue254;\red167\green197\blue152;\red205\green173\blue106;\red183\green111\blue179;\red24\green24\blue24;
+\red70\green137\blue204;\red194\green126\blue101;\red212\green214\blue154;\red140\green211\blue254;\red202\green202\blue202;
+\red167\green197\blue152;\red0\green0\blue0;\red255\green255\blue255;\red194\green194\blue192;\red183\green111\blue179;
+\red71\green138\blue206;\red194\green125\blue100;\red193\green193\blue193;\red71\green138\blue206;\red212\green213\blue153;
+\red203\green203\blue202;\red141\green213\blue254;\red167\green197\blue151;\red183\green111\blue179;\red212\green213\blue153;
+\red167\green197\blue151;}
 {\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c77483\c52772\c75312;
 \cssrgb\c34356\c61927\c84545;\cssrgb\c80765\c56762\c46655;\cssrgb\c80264\c80263\c79963;\cssrgb\c86232\c86184\c66253;\cssrgb\c83411\c83411\c83099;
 \cssrgb\c61729\c86919\c100000;\cssrgb\c0\c0\c0;\cssrgb\c71061\c80852\c65647;\cssrgb\c77255\c52549\c75294;\cssrgb\c12157\c12157\c12157;
 \cssrgb\c33725\c61176\c83922;\cssrgb\c80784\c56863\c47059;\cssrgb\c80000\c80000\c80000;\cssrgb\c86275\c86275\c66667;\cssrgb\c83137\c83137\c83137;
-\cssrgb\c61176\c86275\c99608;\cssrgb\c70980\c80784\c65882;\cssrgb\c84314\c72941\c49020;}
+\cssrgb\c61176\c86275\c99608;\cssrgb\c70980\c80784\c65882;\cssrgb\c84314\c72941\c49020;\cssrgb\c77255\c52549\c75294;\cssrgb\c12157\c12157\c12157;
+\cssrgb\c33725\c61176\c83922;\cssrgb\c80784\c56863\c47059;\cssrgb\c86275\c86275\c66667;\cssrgb\c61176\c86275\c99608;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c70980\c80784\c65882;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c80437\c80436\c79935;\cssrgb\c77407\c52698\c75306;
+\cssrgb\c34145\c61677\c84338;\cssrgb\c80772\c56796\c46790;\cssrgb\c80176\c80176\c79976;\cssrgb\c34146\c61677\c84338;\cssrgb\c86247\c86215\c66392;
+\cssrgb\c83320\c83320\c83112;\cssrgb\c61545\c86704\c99884;\cssrgb\c71035\c80830\c65726;\cssrgb\c77407\c52698\c75307;\cssrgb\c86247\c86216\c66392;
+\cssrgb\c71034\c80830\c65726;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww16600\viewh8300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
@@ -184,7 +194,29 @@ EX03\
 EX04\
 	.
 \f1\b0\fs26 How to do:\
-	\
+				
+\f2 \cf23 \cb24 \expnd0\expndtw0\kerning0
+#include\cf25  \cf26 <unistd.h>\cf17 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf23 \cb24 #include\cf25  \cf26 <stdio.h>\cf17 \cb1 \
+\
+\cf25 \cb24 void\cf17  \cf27 ft_div_mod\cf17 (\cf25 int\cf17  \cf28 a\cf17 , \cf25 int\cf17  \cf28 b\cf17 )\{\cb1 \
+\cb24     \cf29 *\cf17 a \cf29 =\cf17  a \cf29 /\cf17  b;\cb1 \
+\cb24    \cf29 *\cf17 b \cf29 =\cf17  a \cf29 %\cf17  b;\cb1 \
+\cb24    \cb1 \
+\
+\cb24 \}\cb1 \
+\
+\cf25 \cb24 int\cf17  \cf27 main\cf17 ()\{\cb1 \
+\cb24     \cf25 int\cf17  a, b, c, div, mod;\cb1 \
+\cb24     a \cf29 =\cf17  \cf30 10\cf17 ;\cb1 \
+\cb24     b\cf29 =\cf17  \cf30 3\cf17 ;\cb1 \
+\cb24     \cf27 ft_div_mod\cf17 (a, b, \cf29 &\cf17 div, \cf29 &\cf17 mod);\cb1 \
+\cb24     \cf23 return\cf17  \cf30 0\cf17 ;\cb1 \
+\cb24 \}\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
 	.Verification:\
 		cc -Wall -Wextra -Werror programa.c -o programa\
 	\
@@ -192,21 +224,37 @@ EX04\
 		\
 		
 \f0\b\fs36 \
-
-\f1\b0\fs26 \
-
-\f0\b\fs36 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
-Optional\
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 EX05\
 	.
 \f1\b0\fs26 How to do:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf13 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 #include\cf15 \strokec15  \cf16 \strokec16 <unistd.h>\cf17 \cb1 \strokec17 \
+\
+\cf15 \cb14 \strokec15 void\cf17 \strokec17  \cf18 \strokec18 ft_putstr\cf17 \strokec17 (\cf15 \strokec15 char\cf17 \strokec17  \cf19 \strokec19 *\cf20 \strokec20 str\cf17 \strokec17 )\{\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf13 \strokec13 while\cf17 \strokec17  (\cf19 \strokec19 *\cf17 \strokec17 str) \{\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17         \cf18 \strokec18 write\cf17 \strokec17 (\cf21 \strokec21 1\cf17 \strokec17 , str, \cf21 \strokec21 1\cf17 \strokec17 );\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17         str\cf19 \strokec19 ++\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \}\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \}\cf17 \cb1 \strokec17 \
+\
+\cf15 \cb14 \strokec15 int\cf17 \strokec17  \cf18 \strokec18 main\cf17 \strokec17 ()\{\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf18 \strokec18 ft_putstr\cf17 \strokec17 (\cf16 \strokec16 "Hello, World!"\cf17 \strokec17 );\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf13 \strokec13 return\cf17 \strokec17  \cf21 \strokec21 0\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \}\cf17 \cb1 \strokec17 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 	\
 		\
 	.Verification:\
-		\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 cc -Wall -Wextra -Werror programa.c -o programa\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 		\
 \
 	.Result\
 		
@@ -215,22 +263,92 @@ EX05\
 EX06\
 	.
 \f1\b0\fs26 How to do:\
+\cf31 \cb32 	\cf31 \cb32 \expnd0\expndtw0\kerning0
+#include\cf31 \cb32  \cf31 \cb32 <unistd.h>\cf31 \cb32 \
+\pard\pardeftab720\partightenfactor0
+\cf31 \cb32 \
+\pard\pardeftab720\partightenfactor0
+\cf31 \cb32 \outl0\strokewidth0 \strokec38 int\cf31 \cb32 \strokec37  \cf31 \cb32 \strokec39 ft_strlen\cf31 \cb32 \strokec37 (\cf31 \cb32 \strokec38 char\cf31 \cb32 \strokec37  \cf31 \cb32 \strokec40 *\cf31 \cb32 \strokec41 str\cf31 \cb32 \strokec37 )\{\
+    \cf31 \cb32 \strokec38 int\cf31 \cb32 \strokec37  num \cf31 \cb32 \strokec40 =\cf31 \cb32 \strokec37  \cf31 \cb32 \strokec42 0\cf31 \cb32 \strokec37 ;\
+    \cf31 \cb32 \strokec43 while\cf31 \cb32 \strokec37  (\cf31 \cb32 \strokec40 *\cf31 \cb32 \strokec37 str) \{\
+        num\cf31 \cb32 \strokec40 ++\cf31 \cb32 \strokec37 ;\
+        str\cf31 \cb32 \strokec40 ++\cf31 \cb32 \strokec37 ;\
+    \}\
+    \cf31 \cb32 \strokec43 return\cf31 \cb32 \strokec37  num;\
+\}\
+\pard\pardeftab720\partightenfactor0
+\cf31 \cb32 \outl0\strokewidth0 \
+\
+\cf31 \cb32 int\cf31 \cb32  \cf31 \cb32 main\cf31 \cb32 ()\{\
+Int resultado = 0;\
+\
+	resultado =\cf31 \cb32    ft_putstr("Hello, World!");\cf31 \cb32 \
+    \cf31 \cb32 return\cf31 \cb32  \cf31 \cb32 0\cf31 \cb32 ;\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \cb1 \kerning1\expnd0\expndtw0 \
 	\
 	.Verification:\
-	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 cc -Wall -Wextra -Werror programa.c -o programa\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	\
 	.Result\
 	
 \f0\b\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 EX07\
 	.
+\f1\b0\fs26 How to do\
+	
+\f2 \cf15 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 void\cf17 \strokec17  \cf18 \strokec18 ft_rev_int_tab\cf17 \strokec17 (\cf15 \strokec15 int\cf17 \strokec17  \cf19 \strokec19 *\cf20 \strokec20 tab\cf17 \strokec17 , \cf15 \strokec15 int\cf17 \strokec17  \cf20 \strokec20 size\cf17 \strokec17 )\{\cf17 \cb1 \strokec17 \
+\pard\pardeftab720\partightenfactor0
+\cf17 \cb14 \strokec17     \cf15 \strokec15 int\cf17 \strokec17  i \cf19 \strokec19 =\cf17 \strokec17  \cf21 \strokec21 0\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf15 \strokec15 int\cf17 \strokec17  temp;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \cf13 \strokec13 while\cf17 \strokec17  (i \cf19 \strokec19 <\cf17 \strokec17  size \cf19 \strokec19 /\cf17 \strokec17  \cf21 \strokec21 2\cf17 \strokec17 ) \{ \'97\'97 
+\f3\fs24 \cf0 \cb1 \strokec11 O loop percorre 
+\f4\b apenas metade do array
+\f3\b0 , porque cada troca inverte 
+\f4\b dois elementos
+\f3\b0  ao mesmo tempo (o da frente com o de tr\'e1s).\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Se fosse percorrer todo o array, os elementos seriam trocados de volta e nada mudaria.\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf17 \strokec17 Te\
+\pard\pardeftab720\partightenfactor0
+\cf17 \cb14 \strokec17         temp \cf19 \strokec19 =\cf17 \strokec17  \cf20 \strokec20 tab\cf17 \strokec17 [i];\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17         \cf20 \strokec20 tab\cf17 \strokec17 [i] \cf19 \strokec19 =\cf17 \strokec17  \cf20 \strokec20 tab\cf17 \strokec17 [size \cf19 \strokec19 -\cf17 \strokec17  i \cf19 \strokec19 -\cf17 \strokec17  \cf21 \strokec21 1\cf17 \strokec17 ];\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17         \cf20 \strokec20 tab\cf17 \strokec17 [size \cf19 \strokec19 -\cf17 \strokec17  i \cf19 \strokec19 -\cf17 \strokec17  \cf21 \strokec21 1\cf17 \strokec17 ] \cf19 \strokec19 =\cf17 \strokec17  temp;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17         i\cf19 \strokec19 ++\cf17 \strokec17 ;\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17     \}\cf17 \cb1 \strokec17 \
+\cf17 \cb14 \strokec17 \}\cf17 \cb1 \strokec17 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+	\
+	.Verification:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 cc -Wall -Wextra -Werror programa.c -o programa\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	\
+\
+	.Result\
+		
+\f0\b\fs36 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 EX08\
+	.
 \f1\b0\fs26 How to do:\
 	\
 	.Verification:\
+cc -Wall -Wextra -Werror programa.c -o programa\
 	\
 \
 	.Result\
-		Salut
+	
 \f0\b\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 }
