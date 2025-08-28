@@ -15,7 +15,7 @@
 \fs36 EX01\
 	.
 \f1\b0\fs26 How to do:\
-		id -Gn \'93$FT_USER\'94 | tr ' ' ','  - o que tem de estar escrito no bash (id -Gn pesquisa todos os grupos onde o user \'93FT_USER\'94 est\'e1 / tr \'91\'92 \'91,\'92 = substitui os espa\'e7os por v\'edrgulas )\
+		id -Gn \'93$FT_USER\'94 | tr ' ' ','  | tr -d \'91\\n\'92 - o que tem de estar escrito no bash (id -Gn pesquisa todos os grupos onde o user \'93FT_USER\'94 est\'e1 / tr \'91\'92 \'91,\'92 = substitui os espa\'e7os por v\'edrgulas )\
 		\
 	.Verification:\
 		FT_USER=bocal ./print_groups.sh\
@@ -26,7 +26,7 @@
 EX02\
 	.
 \f1\b0\fs26 How to do:\
-		find . -type f -name -not *.sh" \
+		find . -type f -name -!*.sh" -execdir basename -s \'91.sh\'92  \{\} +\
 	.Verification:\
 		./find_sh.sh | cat -e\
 	.Result\
