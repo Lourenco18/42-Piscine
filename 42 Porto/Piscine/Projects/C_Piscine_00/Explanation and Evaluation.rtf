@@ -23,25 +23,25 @@
 \fs36 EX00\
 	.
 \f1\b0\fs26 How to do:\
-\cf2 	\cf2 \cb3 	\cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 #include\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec6 <unistd.h>. - para usar a fun\'e7\'e3o write \cf2 \cb3 \strokec7 \
+\cf2 	\cb3 	\expnd0\expndtw0\kerning0
+#include <unistd.h>. - para usar a fun\'e7\'e3o write \
 \pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec7 \
-\cf2 \cb3 \strokec5 void\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec8 ft_putchar\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec5 char\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec9 c\cf2 \cb3 \strokec7 )\
+\cf2 \
+void ft_putchar(char c)\
 \{\
-    \cf2 \cb3 \strokec8 write\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec10 1\cf2 \cb3 \strokec7 , \cf2 \cb3 \strokec11 &\cf2 \cb3 \strokec7 c, \cf2 \cb3 \strokec10 1\cf2 \cb3 \strokec7 ); - (1= said padr\'e3o  ou seja vai aparecer na tela/ &c = endere\'e7o do caracter a ser escrito / 1 = quantidade de bytes a escrever)\
+    write(1, &c, 1); - (1= said padr\'e3o  ou seja vai aparecer na tela/ &c = endere\'e7o do caracter a ser escrito / 1 = quantidade de bytes a escrever)\
 \}\
 \
-\cf2 \cb3 \strokec5 int\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec8 main\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec5 void\cf2 \cb3 \strokec7 )\
+int main(void)\
 \{\
-    \cf2 \cb3 \strokec8 ft_putchar\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec6 'c'\cf2 \cb3 \strokec7 );\
+    ft_putchar('c');\
 \
-    \cf2 \cb3 \strokec4 return\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec10 0\cf2 \cb3 \strokec7 ;\
+    return 0;\
 \}
-\f2 \cf12 \cb1 \strokec12 \
+\f2 \cf12 \cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 	\
+\f1 \cf0 \kerning1\expnd0\expndtw0 	\
 	.Verification:\
 		gcc -Wall -Wextra -Werror ft_putchar   - compilar\
 		./a.out\
@@ -52,86 +52,84 @@
 EX01\
 	.
 \f1\b0\fs26 How to do:\
-\cf2 \cb3 		\cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 #include\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec6 <unistd.h>\cf2 \cb3 \strokec7 \
+\cf2 \cb3 		\expnd0\expndtw0\kerning0
+#include <unistd.h>\
 \pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec7 \
-\cf2 \cb3 \strokec5 void\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec8 ft_print_alphabet\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec5 void\cf2 \cb3 \strokec7 )\
+\cf2 \
+void ft_print_alphabet(void)\
 \{\
-    \cf2 \cb3 \strokec5 char\cf2 \cb3 \strokec7  letter \cf2 \cb3 \strokec11 =\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec6 'a'\cf2 \cb3 \strokec7 ; -  cria uma vari\'e1vel letter \
-    \cf2 \cb3 \strokec4 while\cf2 \cb3 \strokec7  (letter \cf2 \cb3 \strokec11 <=\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec6 'z'\cf2 \cb3 \strokec7 ) enquanto letter for <= que z imprime e soma uma letra para continuar a escrever o resto das letras\
+    char letter = 'a'; -  cria uma vari\'e1vel letter \
+    while (letter <= 'z') enquanto letter for <= que z imprime e soma uma letra para continuar a escrever o resto das letras\
     \{\
-        \cf2 \cb3 \strokec8 write\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec10 1\cf2 \cb3 \strokec7 , \cf2 \cb3 \strokec11 &\cf2 \cb3 \strokec7 letter, \cf2 \cb3 \strokec10 1\cf2 \cb3 \strokec7 );\
-        letter\cf2 \cb3 \strokec11 ++\cf2 \cb3 \strokec7 ;\
+        write(1, &letter, 1);\
+        letter++;\
     \}\
 \}\
 \
 \
-\cf2 \cb3 \strokec5 int\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec8 main\cf2 \cb3 \strokec7 (\cf2 \cb3 \strokec5 void\cf2 \cb3 \strokec7 )\
+int main(void)\
 \{\
-    \cf2 \cb3 \strokec8 ft_print_alphabet\cf2 \cb3 \strokec7 ();\
-    \cf2 \cb3 \strokec4 return\cf2 \cb3 \strokec7  \cf2 \cb3 \strokec10 0\cf2 \cb3 \strokec7 ;\
+    ft_print_alphabet();\
+    return 0;\
 \}
-\f2 \cf12 \cb1 \strokec12 \
+\f2 \cf12 \cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
 -
 \f3\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13 Um 
+Um 
 \f4\b char
 \f3\b0  em C n\'e3o \'e9 \'93uma letra m\'e1gica\'94, ele \'e9 s\'f3 um 
 \f4\b n\'famero inteiro
 \f3\b0  de 1 byte que segue a 
 \f4\b tabela ASCII
-\f1\b0\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f1\b0\fs26 \kerning1\expnd0\expndtw0 \
 		\
 	.Verification:\
 		cc -Wall -Wextra -Werror programa.c -o programa - compilar\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 		./programa\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 	\
+		./programa\
+	\
 	.Result\
 		\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\b\fs36 \
+\f0\b\fs36 \cf0 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 EX02\
 	.
 \f1\b0\fs26 How to do:\
 		
 \f2 \cf14 \cb15 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec14 #include\cf16 \strokec16  \cf17 \strokec17 <unistd.h>\cf12 \cb1 \strokec12 \
+#include\cf16  \cf17 <unistd.h>\cf12 \cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf12 \
-\cf16 \cb15 \strokec16 void\cf12 \strokec12  \cf18 \strokec18 ft_print_alphabet\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf16 \cb15 void\cf12  \cf18 ft_print_alphabet\cf12 (\cf16 void\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15     \cf16 \strokec16 char\cf12 \strokec12  letter \cf19 \strokec19 =\cf12 \strokec12  \cf17 \strokec17 'z'\cf12 \strokec12 ;\cb1 \
-\cb15     \cf14 \strokec14 while\cf12 \strokec12  (letter \cf19 \strokec19 >=\cf12 \strokec12  \cf17 \strokec17 'a'\cf12 \strokec12 )\cb1 \
+\cb15     \cf16 char\cf12  letter \cf19 =\cf12  \cf17 'z'\cf12 ;\cb1 \
+\cb15     \cf14 while\cf12  (letter \cf19 >=\cf12  \cf17 'a'\cf12 )\cb1 \
 \cb15     \{\cb1 \
-\cb15         \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf19 \strokec19 &\cf12 \strokec12 letter, \cf20 \strokec20 1\cf12 \strokec12 );\cb1 \
-\cb15         letter\cf19 \strokec19 --\cf12 \strokec12 ;\cb1 \
+\cb15         \cf18 write\cf12 (\cf20 1\cf12 , \cf19 &\cf12 letter, \cf20 1\cf12 );\cb1 \
+\cb15         letter\cf19 --\cf12 ;\cb1 \
 \cb15     \}\cb1 \
 \cb15 \}\cb1 \
 \
 \
-\cf16 \cb15 \strokec16 int\cf12 \strokec12  \cf18 \strokec18 main\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cf16 \cb15 int\cf12  \cf18 main\cf12 (\cf16 void\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15     \cf18 \strokec18 ft_print_alphabet\cf12 \strokec12 ();\cb1 \
-\cb15     \cf14 \strokec14 return\cf12 \strokec12  \cf20 \strokec20 0\cf12 \strokec12 ;\cb1 \
+\cb15     \cf18 ft_print_alphabet\cf12 ();\cb1 \
+\cb15     \cf14 return\cf12  \cf20 0\cf12 ;\cb1 \
 \cb15 \}\cb1 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
 \
 	.Verification:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 cc -Wall -Wextra -Werror programa.c -o programa - compilar\
+cc -Wall -Wextra -Werror programa.c -o programa - compilar\
 		./programa\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
+\
 		\
 	.Result\
 	
@@ -142,37 +140,36 @@ EX03\
 \f1\b0\fs26 How to do:\
 		
 \f2 \cf14 \cb15 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec14 #include\cf16 \strokec16  \cf17 \strokec17 <unistd.h>\cf12 \cb1 \strokec12 \
+#include\cf16  \cf17 <unistd.h>\cf12 \cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf12 \
-\cf16 \cb15 \strokec16 void\cf12 \strokec12  \cf18 \strokec18 ft_print_numbers\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf16 \cb15 void\cf12  \cf18 ft_print_numbers\cf12 (\cf16 void\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15     \cf16 \strokec16 char\cf12 \strokec12  number \cf19 \strokec19 =\cf12 \strokec12  \cf17 \strokec17 '0'\cf12 \strokec12 ;\cb1 \
-\cb15     \cf14 \strokec14 while\cf12 \strokec12  (number \cf19 \strokec19 <=\cf12 \strokec12  \cf17 \strokec17 '9'\cf12 \strokec12 )\cb1 \
+\cb15     \cf16 char\cf12  number \cf19 =\cf12  \cf17 '0'\cf12 ;\cb1 \
+\cb15     \cf14 while\cf12  (number \cf19 <=\cf12  \cf17 '9'\cf12 )\cb1 \
 \cb15     \{\cb1 \
-\cb15         \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf19 \strokec19 &\cf12 \strokec12 number, \cf20 \strokec20 1\cf12 \strokec12 );\cb1 \
-\cb15         number\cf19 \strokec19 ++\cf12 \strokec12 ;\cb1 \
+\cb15         \cf18 write\cf12 (\cf20 1\cf12 , \cf19 &\cf12 number, \cf20 1\cf12 );\cb1 \
+\cb15         number\cf19 ++\cf12 ;\cb1 \
 \cb15     \}\cb1 \
 \cb15 \}\cb1 \
 \
 \
 \
-\cf16 \cb15 \strokec16 int\cf12 \strokec12  \cf18 \strokec18 main\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cf16 \cb15 int\cf12  \cf18 main\cf12 (\cf16 void\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15     \cf18 \strokec18 ft_print_numbers\cf12 \strokec12 ();\cb1 \
-\cb15     \cf14 \strokec14 return\cf12 \strokec12  \cf20 \strokec20 0\cf12 \strokec12 ;\cb1 \
+\cb15     \cf18 ft_print_numbers\cf12 ();\cb1 \
+\cb15     \cf14 return\cf12  \cf20 0\cf12 ;\cb1 \
 \cb15 \}\cb1 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
 	\
 	.Verification:\
 	cc -Wall -Wextra -Werror programa.c -o programa - compilar\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 		./programa\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 		\
+		./programa\
+		\
 	.Result\
 	
 \f0\b\fs36 \
@@ -182,35 +179,34 @@ EX04\
 \f1\b0\fs26 How to do:\
 		
 \f2 \cf14 \cb15 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec14 #include\cf16 \strokec16  \cf17 \strokec17 <unistd.h>\cf12 \cb1 \strokec12 \
+#include\cf16  \cf17 <unistd.h>\cf12 \cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf12 \
-\cf16 \cb15 \strokec16 void\cf12 \strokec12  \cf18 \strokec18 ft_is_negative\cf12 \strokec12 (\cf16 \strokec16 int\cf12 \strokec12  \cf21 \strokec21 n\cf12 \strokec12 )\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf16 \cb15 void\cf12  \cf18 ft_is_negative\cf12 (\cf16 int\cf12  \cf21 n\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15  \cf14 \strokec14 if\cf12 \strokec12 (n\cf19 \strokec19 <\cf20 \strokec20 0\cf12 \strokec12 )\{\cb1 \
-\cb15     \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf17 \strokec17 "N\cf22 \cb15 \strokec22 \\n\cf17 \cb15 \strokec17 "\cf12 \strokec12 , \cf20 \strokec20 2\cf12 \strokec12 );\cb1 \
-\cb15  \} \cf14 \strokec14 else\cf12 \strokec12  \cf14 \strokec14 if\cf12 \strokec12 (n\cf19 \strokec19 >=\cf20 \strokec20 0\cf12 \strokec12 ) \{\cb1 \
-\cb15     \cf18 \strokec18 write\cf12 \strokec12 (\cf20 \strokec20 1\cf12 \strokec12 , \cf17 \strokec17 "P\cf22 \cb15 \strokec22 \\n\cf17 \cb15 \strokec17 "\cf12 \strokec12 , \cf20 \strokec20 2\cf12 \strokec12 );\cb1 \
+\cb15  \cf14 if\cf12 (n\cf19 <\cf20 0\cf12 )\{\cb1 \
+\cb15     \cf18 write\cf12 (\cf20 1\cf12 , \cf17 "N\cf22 \\n\cf17 "\cf12 , \cf20 2\cf12 );\cb1 \
+\cb15  \} \cf14 else\cf12  \cf14 if\cf12 (n\cf19 >=\cf20 0\cf12 ) \{\cb1 \
+\cb15     \cf18 write\cf12 (\cf20 1\cf12 , \cf17 "P\cf22 \\n\cf17 "\cf12 , \cf20 2\cf12 );\cb1 \
 \cb15  \} \cb1 \
 \cb15 \}\cb1 \
 \
-\cf16 \cb15 \strokec16 int\cf12 \strokec12  \cf18 \strokec18 main\cf12 \strokec12 (\cf16 \strokec16 void\cf12 \strokec12 )\cb1 \
+\cf16 \cb15 int\cf12  \cf18 main\cf12 (\cf16 void\cf12 )\cb1 \
 \cb15 \{\cb1 \
-\cb15     \cf18 \strokec18 ft_is_negative\cf12 \strokec12 (\cf20 \strokec20 5\cf12 \strokec12  );\cb1 \
-\cb15     \cf18 \strokec18 ft_is_negative\cf12 \strokec12 (\cf19 \strokec19 -\cf20 \strokec20 5\cf12 \strokec12 );\cb1 \
-\cb15     \cf18 \strokec18 ft_is_negative\cf12 \strokec12 (\cf20 \strokec20 0\cf12 \strokec12 );\cb1 \
-\cb15     \cf14 \strokec14 return\cf12 \strokec12  \cf20 \strokec20 0\cf12 \strokec12 ;\cb1 \
+\cb15     \cf18 ft_is_negative\cf12 (\cf20 5\cf12  );\cb1 \
+\cb15     \cf18 ft_is_negative\cf12 (\cf19 -\cf20 5\cf12 );\cb1 \
+\cb15     \cf18 ft_is_negative\cf12 (\cf20 0\cf12 );\cb1 \
+\cb15     \cf14 return\cf12  \cf20 0\cf12 ;\cb1 \
 \cb15 \}\cb1 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\
+\f1 \cf0 \kerning1\expnd0\expndtw0 		\
 	.Verification:\
 		cc -Wall -Wextra -Werror programa.c -o programa - compilar\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 		./programa\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
+		./programa\
+\
 	\
 	.Result\
 	\
@@ -227,6 +223,50 @@ Optional\
 EX05\
 	.
 \f1\b0\fs26 How to do:\
+#include <unistd.h>\
+\
+void ft_print_comb(void)\
+\{\
+    int i;\
+    int j;\
+    int k;\
+\
+    i = 0;\
+    while (i <= 7) \
+    \{\
+        j = i + 1; \
+        while (j <= 8)\
+        \{\
+            k = j + 1; \
+            while (k <= 9)\
+            \{\
+                \
+                char c1 = i + '0';\
+                char c2 = j + '0';\
+                char c3 = k + '0';\
+\
+                write(1, &c1, 1);\
+                write(1, &c2, 1);\
+                write(1, &c3, 1);\
+\
+               \
+                if (!(i == 7 && j == 8 && k == 9))\
+                    write(1, ", ", 2);\
+\
+                k++;\
+            \}\
+            j++;\
+        \}\
+        i++;\
+    \}\
+\}\
+\
+int main(void)\
+\{\
+    ft_print_comb();\
+    return 0;\
+\}\
+\
 	\
 		\
 	.Verification:\
@@ -239,6 +279,45 @@ EX05\
 EX06\
 	.
 \f1\b0\fs26 How to do:\
+#include <unistd.h>\
+\
+void ft_print_comb2(void)\
+\{\
+    int a;\
+    int b;\
+\
+    a = 0;\
+    while (a <= 98) \
+    \{\
+        b = a + 1;  \
+        while (b <= 99)\
+        \{\
+            char c1 = a / 10 + '0';\
+            char c2 = a % 10 + '0';\
+            char c3 = b / 10 + '0';\
+            char c4 = b % 10 + '0';\
+\
+            write(1, &c1, 1);\
+            write(1, &c2, 1);\
+            write(1, " ", 1);\
+            write(1, &c3, 1);\
+            write(1, &c4, 1);\
+\
+            if (!(a == 98 && b == 99)) \
+                write(1, ", ", 2);\
+\
+            b++;\
+        \}\
+        a++;\
+    \}\
+\}\
+\
+int main(void)\
+\{\
+    ft_print_comb2();\
+    return 0;\
+\}\
+\
 		\
 	.Verification:\
 		\
@@ -249,11 +328,39 @@ EX06\
 EX07\
 	.
 \f1\b0\fs26 How to do:\
-		\
-		\
+\
+#include <stdio.h>\
+#include <unistd.h>\
+  void ft_putnbr(int nb)\{\
+    \
+     write(1, &c, 1);\
+ \
+  \}\
+  \
+int main()\
+\{\
+  \
+  if (nb == -2147483648) \
+    \{\
+        write(1, "-2147483648", 11);\
+        return;\
+    \}\
+    if (nb < 0) \
+    \{\
+        write(1,'-', 1);\
+        nb = -nb;\
+    \}\
+    if (nb > 9) \
+    \{\
+        ft_putnbr(nb / 10);\
+    \}\
+    ft_putchar(nb % 10 + '0'); \
+\
+    ft_putnbr(42);\
+    return 0;\
+\}		\
 	.Verification:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
+\
 	.Result\
 		
 \f0\b\fs36 \
