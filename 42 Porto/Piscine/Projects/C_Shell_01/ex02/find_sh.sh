@@ -1,2 +1,2 @@
-find . -type f -name "*.sh"
+find . -type f -name "*.sh" -execdir basename -s '.sh' {} +
 

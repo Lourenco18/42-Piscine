@@ -1,1 +1,1 @@
-ip link show | awk '/ether/{print $2}'
+ifconfig | grep -i ether | awk '{print $2}'
