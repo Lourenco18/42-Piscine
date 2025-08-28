@@ -24,4 +24,19 @@ void ft_sort_int_tab(int *tab, int size)
     }
 }
 
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int arr[] = {5, 3, 4, 1, 2};
+    int i;
+    ft_sort_int_tab(arr, 5);
+    for (i = 0; i < 5; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+    return 0;
+}
+*/
+
 

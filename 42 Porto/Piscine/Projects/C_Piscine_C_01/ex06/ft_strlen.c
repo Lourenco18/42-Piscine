@@ -6,3 +6,13 @@ int ft_strlen(char *str){
     }
     return num;
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char *s = "Piscine";
+    printf("Comprimento: %d\n", ft_strlen(s));
+    return 0;
+}
+*/

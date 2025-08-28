@@ -7,3 +7,11 @@ void ft_putstr(char *str){
     }
 }
 
+/*
+int main(void)
+{
+    ft_putstr("Hello, 42 Porto!\n");
+    return 0;
+}
+*/
+
