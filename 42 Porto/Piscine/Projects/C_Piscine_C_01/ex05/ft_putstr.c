@@ -5,33 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/28 16:39:51 by dasantos          #+#    #+#             */
-/*   Updated: 2025/08/28 17:22:12 by dasantos         ###   ########.fr       */
+/*   Created: 2025/08/29 11:15:48 by dasantos          #+#    #+#             */
+/*   Updated: 2025/08/29 11:27:12 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *str )
-
+void	ft_putstr(char *str)
 {
-	int 	i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i])
 	{
-		char	c;
-
-		c = *str[i];
-		write(1, &c, 1);
+		write(1, &str[i], 1);
 		i++;
 	}
 }
-
-
+/*
 int main(void)
 {
     ft_putstr("frase para exerccio05");
     return 0;
-}
-
+}*/
