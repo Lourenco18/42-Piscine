@@ -9,13 +9,13 @@ char *ft_strcapitalize(char *str)
             (str[i] >= 'A' && str[i] <= 'Z') ||
             (str[i] >= '0' && str[i] <= '9'))
         {
-            if (new_w) // primeira letra da palavra
+            if (new_w) // se for a primeira letra da palavra
             {
                 if (str[i] >= 'a' && str[i] <= 'z')
                     str[i] -= 32; // transforma em maiúscula
                 new_w = 0;
             }
-            else // resto da palavra
+            else // se for o resto da palavra
             {
                 if (str[i] >= 'A' && str[i] <= 'Z')
                     str[i] += 32; // transforma em minúscula 
@@ -23,7 +23,7 @@ char *ft_strcapitalize(char *str)
         }
         else
         {
-            new_w = 1; // próximo carácter válido inicia uma nova palavra
+            new_w = 1; // quando é um espaço
         }
         i++;
     }
