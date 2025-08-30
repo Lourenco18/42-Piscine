@@ -572,6 +572,46 @@ EX10\
 EX11\
 	.
 \f1\b0\fs26 How to do:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf19 \cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec19 #include\cf14 \strokec14  \cf21 \strokec21 <unistd.h>\cf4 \cb1 \strokec4 \
+\
+\cf14 \cb15 \strokec14 void\cf4 \strokec4  \cf16 \cb15 \strokec16 ft_putstr_non_printable\cf4 \cb15 \strokec4 (\cf14 \strokec14 char\cf4 \strokec4  \cf17 \strokec17 *\cf18 \strokec18 str\cf4 \strokec4 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf14 \strokec14 int\cf4 \strokec4  i \cf17 \strokec17 =\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 ;\cb1 \
+\cb15     \cf14 \strokec14 char\cf4 \strokec4  hex_digits\cf14 \strokec14 []\cf4 \strokec4  \cf17 \strokec17 =\cf4 \strokec4  \cf21 \strokec21 "0123456789abcdef"\cf4 \strokec4 ;\cb1 \
+\
+\cb15     \cf19 \strokec19 while\cf4 \strokec4  (\cf18 \strokec18 str\cf4 \strokec4 [i] \cf17 \strokec17 !=\cf4 \strokec4  \cf21 \strokec21 '\cf22 \strokec22 \\0\cf21 \strokec21 '\cf4 \strokec4 )\cb1 \
+\cb15     \{\cb1 \
+\cb15         \cf19 \strokec19 if\cf4 \strokec4  (\cf18 \strokec18 str\cf4 \strokec4 [i] \cf17 \strokec17 <\cf4 \strokec4  \cf20 \strokec20 32\cf4 \strokec4  \cf17 \strokec17 ||\cf4 \strokec4  \cf18 \strokec18 str\cf4 \strokec4 [i] \cf17 \strokec17 ==\cf4 \strokec4  \cf20 \strokec20 127\cf4 \strokec4 )\cb1 \
+\cb15         \{\cb1 \
+\cb15             \cf14 \strokec14 char\cf4 \strokec4  c \cf17 \strokec17 =\cf4 \strokec4  (\cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 char\cf4 \strokec4 )\cf18 \strokec18 str\cf4 \strokec4 [i];\cb1 \
+\cb15             \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 "\cf22 \strokec22 \\\\\cf21 \strokec21 "\cf4 \strokec4 , \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15             \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf17 \strokec17 &\cf18 \strokec18 hex_digits\cf4 \strokec4 [c \cf17 \strokec17 /\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ], \cf20 \strokec20 1\cf4 \strokec4 ); \cb1 \
+\cb15             \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf17 \strokec17 &\cf18 \strokec18 hex_digits\cf4 \strokec4 [c \cf17 \strokec17 %\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ], \cf20 \strokec20 1\cf4 \strokec4 ); \cb1 \
+\cb15         \}\cb1 \
+\cb15         \cf19 \strokec19 else\cf4 \cb1 \strokec4 \
+\cb15         \{\cb1 \
+\cb15             \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf17 \strokec17 &\cf18 \strokec18 str\cf4 \strokec4 [i], \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15         \}\cb1 \
+\cb15         i\cf17 \strokec17 ++\cf4 \strokec4 ;\cb1 \
+\cb15     \}\cb1 \
+\cb15 \}\cb1 \
+\cf23 \cb15 \strokec23 /*\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23 int main(void)\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23 \{\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23     char str[] = "Ola\\nesta bem?\\tFim\\x7f";\cf4 \cb1 \strokec4 \
+\
+\cf23 \cb15 \strokec23     ft_putstr_non_printable(str);\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23     write(1, "\\n", 1);\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23     return 0;\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23 \}\cf4 \cb1 \strokec4 \
+\cf23 \cb15 \strokec23     */\cf4 \cb1 \strokec4 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 	\
 	.Verification:\
 	\
@@ -582,6 +622,76 @@ EX11\
 EX12\
 	.
 \f1\b0\fs26 How to do:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf19 \cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec19 #include\cf14 \strokec14  \cf21 \strokec21 <unistd.h>\cf4 \cb1 \strokec4 \
+\
+\cf14 \cb15 \strokec14 void\cf4 \strokec4  \cf17 \strokec17 *\cf16 \cb15 \strokec16 ft_print_memory\cf4 \cb15 \strokec4 (\cf14 \strokec14 void\cf4 \strokec4  \cf17 \strokec17 *\cf18 \strokec18 addr\cf4 \strokec4 , \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 int\cf4 \strokec4  \cf18 \strokec18 size\cf4 \strokec4 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 int\cf4 \strokec4  i \cf17 \strokec17 =\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 , j;\cb1 \
+\cb15     \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 char\cf4 \strokec4  \cf17 \strokec17 *\cf4 \strokec4 p \cf17 \strokec17 =\cf4 \strokec4  (\cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 char\cf4 \strokec4  \cf17 \strokec17 *\cf4 \strokec4 )addr;\cb1 \
+\cb15     \cf14 \strokec14 char\cf4 \strokec4  hex\cf14 \strokec14 []\cf4 \strokec4  \cf17 \strokec17 =\cf4 \strokec4  \cf21 \strokec21 "0123456789abcdef"\cf4 \strokec4 ;\cb1 \
+\
+\cb15     \cf19 \strokec19 while\cf4 \strokec4  (i \cf17 \strokec17 <\cf4 \strokec4  size)\cb1 \
+\cb15     \{\cb1 \
+\cb15         \cf23 \strokec23 // 1) Endere\'e7o em hexadecimal (16 d\'edgitos)\cf4 \cb1 \strokec4 \
+\cb15         \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 long\cf4 \strokec4  addr_val \cf17 \strokec17 =\cf4 \strokec4  (\cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 long\cf4 \strokec4 )(p \cf17 \strokec17 +\cf4 \strokec4  i);\cb1 \
+\cb15         \cf14 \strokec14 char\cf4 \strokec4  \cf18 \strokec18 buffer\cf4 \strokec4 [\cf20 \strokec20 16\cf4 \strokec4 ];\cb1 \
+\cb15         \cf19 \strokec19 for\cf4 \strokec4  (j \cf17 \strokec17 =\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 ; j \cf17 \strokec17 <\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ; j\cf17 \strokec17 ++\cf4 \strokec4 )\cb1 \
+\cb15         \{\cb1 \
+\cb15             \cf18 \strokec18 buffer\cf4 \strokec4 [\cf20 \strokec20 15\cf4 \strokec4  \cf17 \strokec17 -\cf4 \strokec4  j] \cf17 \strokec17 =\cf4 \strokec4  \cf18 \strokec18 hex\cf4 \strokec4 [addr_val \cf17 \strokec17 %\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ];\cb1 \
+\cb15             addr_val \cf17 \strokec17 /=\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ;\cb1 \
+\cb15         \}\cb1 \
+\cb15         \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , buffer, \cf20 \strokec20 16\cf4 \strokec4 );\cb1 \
+\cb15         \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 ": "\cf4 \strokec4 , \cf20 \strokec20 2\cf4 \strokec4 );\cb1 \
+\
+\cb15         \cf23 \strokec23 // 2) Conte\'fado em hexadecimal (16 bytes por linha)\cf4 \cb1 \strokec4 \
+\cb15         \cf19 \strokec19 for\cf4 \strokec4  (j \cf17 \strokec17 =\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 ; j \cf17 \strokec17 <\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ; j\cf17 \strokec17 ++\cf4 \strokec4 )\cb1 \
+\cb15         \{\cb1 \
+\cb15             \cf19 \strokec19 if\cf4 \strokec4  (i \cf17 \strokec17 +\cf4 \strokec4  j \cf17 \strokec17 <\cf4 \strokec4  size)\cb1 \
+\cb15             \{\cb1 \
+\cb15                 \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 char\cf4 \strokec4  c \cf17 \strokec17 =\cf4 \strokec4  \cf18 \strokec18 p\cf4 \strokec4 [i \cf17 \strokec17 +\cf4 \strokec4  j];\cb1 \
+\cb15                 \cf14 \strokec14 char\cf4 \strokec4  \cf18 \strokec18 b\cf4 \strokec4 [\cf20 \strokec20 2\cf4 \strokec4 ];\cb1 \
+\cb15                 \cf18 \strokec18 b\cf4 \strokec4 [\cf20 \strokec20 0\cf4 \strokec4 ] \cf17 \strokec17 =\cf4 \strokec4  \cf18 \strokec18 hex\cf4 \strokec4 [c \cf17 \strokec17 /\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ];\cb1 \
+\cb15                 \cf18 \strokec18 b\cf4 \strokec4 [\cf20 \strokec20 1\cf4 \strokec4 ] \cf17 \strokec17 =\cf4 \strokec4  \cf18 \strokec18 hex\cf4 \strokec4 [c \cf17 \strokec17 %\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ];\cb1 \
+\cb15                 \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , b, \cf20 \strokec20 2\cf4 \strokec4 );\cb1 \
+\cb15             \}\cb1 \
+\cb15             \cf19 \strokec19 else\cf4 \cb1 \strokec4 \
+\cb15                 \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 "  "\cf4 \strokec4 , \cf20 \strokec20 2\cf4 \strokec4 );\cb1 \
+\
+\cb15             \cf19 \strokec19 if\cf4 \strokec4  (j \cf17 \strokec17 %\cf4 \strokec4  \cf20 \strokec20 2\cf4 \strokec4  \cf17 \strokec17 ==\cf4 \strokec4  \cf20 \strokec20 1\cf4 \strokec4 )\cb1 \
+\cb15                 \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 " "\cf4 \strokec4 , \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15         \}\cb1 \
+\
+\cb15         \cf23 \strokec23 // 3) Conte\'fado em ASCII\cf4 \cb1 \strokec4 \
+\cb15         \cf19 \strokec19 for\cf4 \strokec4  (j \cf17 \strokec17 =\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 ; j \cf17 \strokec17 <\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4  \cf17 \strokec17 &&\cf4 \strokec4  i \cf17 \strokec17 +\cf4 \strokec4  j \cf17 \strokec17 <\cf4 \strokec4  size; j\cf17 \strokec17 ++\cf4 \strokec4 )\cb1 \
+\cb15         \{\cb1 \
+\cb15             \cf14 \strokec14 unsigned\cf4 \strokec4  \cf14 \strokec14 char\cf4 \strokec4  c \cf17 \strokec17 =\cf4 \strokec4  \cf18 \strokec18 p\cf4 \strokec4 [i \cf17 \strokec17 +\cf4 \strokec4  j];\cb1 \
+\cb15             \cf19 \strokec19 if\cf4 \strokec4  (c \cf17 \strokec17 >=\cf4 \strokec4  \cf20 \strokec20 32\cf4 \strokec4  \cf17 \strokec17 &&\cf4 \strokec4  c \cf17 \strokec17 <=\cf4 \strokec4  \cf20 \strokec20 126\cf4 \strokec4 )\cb1 \
+\cb15                 \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf17 \strokec17 &\cf4 \strokec4 c, \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15             \cf19 \strokec19 else\cf4 \cb1 \strokec4 \
+\cb15                 \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 "."\cf4 \strokec4 , \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15         \}\cb1 \
+\
+\cb15         \cf16 \cb15 \strokec16 write\cf4 \cb15 \strokec4 (\cf20 \strokec20 1\cf4 \strokec4 , \cf21 \strokec21 "\cf22 \strokec22 \\n\cf21 \strokec21 "\cf4 \strokec4 , \cf20 \strokec20 1\cf4 \strokec4 );\cb1 \
+\cb15         i \cf17 \strokec17 +=\cf4 \strokec4  \cf20 \strokec20 16\cf4 \strokec4 ;\cb1 \
+\cb15     \}\cb1 \
+\
+\cb15     \cf19 \strokec19 return\cf4 \strokec4  addr;\cb1 \
+\cb15 \}\cb1 \
+\
+\cf14 \cb15 \strokec14 int\cf4 \strokec4  \cf16 \cb15 \strokec16 main\cf4 \cb15 \strokec4 (\cf14 \strokec14 void\cf4 \strokec4 )\cb1 \
+\cb15 \{\cb1 \
+\cb15     \cf14 \strokec14 char\cf4 \strokec4  str\cf14 \strokec14 []\cf4 \strokec4  \cf17 \strokec17 =\cf4 \strokec4  \cf21 \strokec21 "memoria"\cf4 \strokec4 ;\cb1 \
+\cb15     \cf16 \cb15 \strokec16 ft_print_memory\cf4 \cb15 \strokec4 (str, \cf14 \strokec14 sizeof\cf4 \strokec4 (str));\cb1 \
+\cb15     \cf19 \strokec19 return\cf4 \strokec4  \cf20 \strokec20 0\cf4 \strokec4 ;\cb1 \
+\cb15 \}\cb1 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 	\
 	.Verification:\
 	\
