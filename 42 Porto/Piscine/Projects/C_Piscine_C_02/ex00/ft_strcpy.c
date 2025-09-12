@@ -1,12 +1,26 @@
-char *ft_strcpy(char *dest, char *src){
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/30 12:51:06 by dasantos          #+#    #+#             */
+/*   Updated: 2025/08/30 12:52:44 by dasantos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (src[i] != '\0'){
-        dest[i] = src[i];
-        i++;
-    }
-    return (dest);
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
 /*
 #include <stdio.h>

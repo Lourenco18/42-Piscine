@@ -1,18 +1,25 @@
-int ft_str_is_numeric(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/30 13:20:27 by dasantos          #+#    #+#             */
+/*   Updated: 2025/08/30 13:23:31 by dasantos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_str_is_numeric(char *str)
 {
-    if (!str) // string NULL não conta como vazia
-        return 0;
-
-    while (*str != '\0')
-    {
-        if (*str < '0' || *str > '9')
-            return 0; // encontrou algo que não é número
-        str++;
-    }
-    return 1; // só tinha números (ou estava vazia)
+	while (*str != '\0')
+	{
+		if (*str < '0' || *str > '9')
+			return (0);
+		str++;
+	}
+	return (1);
 }
-
-
 /*
 #include <stdio.h>
 
