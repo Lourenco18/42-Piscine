@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 13:30:31 by dasantos          #+#    #+#             */
-/*   Updated: 2025/08/30 13:39:37 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/13 13:04:55 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 || stri[i] > 126)
+		if (str[i] <= 32 || str[i] >= 126)
 		{
 			return (0);
 			i++;

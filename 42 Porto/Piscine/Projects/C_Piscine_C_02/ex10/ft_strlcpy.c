@@ -6,17 +6,24 @@
 /*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 10:14:14 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/12 10:17:57 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/12 11:24:03 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
+	unsigned int	len;
 
+	i = 0;
+	len = 0;
+	while (src[len] != '\0')
+	{
+		len++;
+	}
 	if (size == 0)
 	{
-		return (0);
+		return (len);
 	}
 	while (src[i] != '\0')
 	{
@@ -25,9 +32,9 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		i++;
 	}
 	dest[i] = '\0';
-	return (i);
+	return (len);
 }
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -42,4 +49,4 @@ int main(void)
     return 0;
 }
 
-
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 12:54:49 by dasantos          #+#    #+#             */
-/*   Updated: 2025/08/30 12:59:01 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/13 13:03:10 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
 
-	dest[n] = '\0';
 	i = 0;
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-
+	dest[n] = '\0';
 	return (dest);
 }
 /*
