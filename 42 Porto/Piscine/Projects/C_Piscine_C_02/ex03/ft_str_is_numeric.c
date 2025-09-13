@@ -20,7 +20,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-/*
+
 #include <stdio.h>
 
 
@@ -33,4 +33,4 @@ int main(void)
     printf("Result (\"0000\"): %d\n", ft_str_is_numeric("0000")); // 1
     return 0;
 }
-    */
+    
