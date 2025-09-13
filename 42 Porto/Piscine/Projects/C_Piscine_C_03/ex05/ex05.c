@@ -6,14 +6,14 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 15:50:03 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 15:50:03 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/13 15:50:36 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int ft_strlen(char *str)
 {
     unsigned int i;
-
+2
     i = 0;
     while (str[i] != '\0')
         i++;
