@@ -6,7 +6,7 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 12:51:06 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 13:05:50 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/13 13:49:12 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	des[i] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 /*
