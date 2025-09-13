@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex02.c                                             :+:      :+:    :+:   */
+/*   ex00.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 14:02:01 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 14:02:04 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/13 13:41:40 by dasantos          #+#    #+#             */
+/*   Updated: 2025/09/13 13:54:07 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
-    int j;
+	int	i;
 
-    i = 0;
-    while (dest[i] != '\0')
-        i++;
-    j = 0;
-    while (src[j] != '\0')
-    {
-        dest[i + j] = src[j];
-        j++;
-    }
-    dest[i + j] = '\0';
-    return (dest);
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+		{
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+			i++;
+		}
+	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
