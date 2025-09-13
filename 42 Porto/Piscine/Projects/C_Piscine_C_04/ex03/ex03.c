@@ -6,25 +6,30 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 17:12:52 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 17:18:31 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/13 17:45:18 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	sign;
+	int		sinal = 1;
+;
 	int	result;
 
 	i = 0;
-	sign = 1;
+	sinal = 1;
 	result = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	{
 		i++;
+	}
 	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			sign = -sign;
+		{
+			sinal = -sinal;
+		}
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -32,5 +37,14 @@ int	ft_atoi(char *str)
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return (result * sinal);
 }
+/*
+int	main(void)
+{
+	
+	printf("Input: \"%s\" → Output: %d\n", "   ---+--+1234ab567", ft_atoi("   ---+--+1234ab567"));
+
+	return (0);
+}
+    */
