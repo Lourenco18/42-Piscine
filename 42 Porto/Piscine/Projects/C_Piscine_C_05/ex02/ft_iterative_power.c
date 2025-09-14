@@ -1,19 +1,30 @@
-/* ft_iterative_power.c */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/14 19:42:52 by dasantos          #+#    #+#             */
+/*   Updated: 2025/09/14 21:12:11 by dasantos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int ft_iterative_power(int nb, int power)
 {
-    int res;
+    int result;
     int i;
 
     if (power < 0)
         return (0);
     if (power == 0)
-        return (1); /* inclui 0^0 -> 1 conforme enunciado */
-    res = 1;
+        return (1);
+    result = 1;
     i = 0;
     while (i < power)
     {
-        res *= nb;
+        result *= nb;
         i++;
     }
-    return (res);
+    return (result);
 }

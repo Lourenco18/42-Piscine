@@ -6,7 +6,7 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 17:00:37 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 17:18:31 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/14 21:12:11 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	ft_putnbr(int nb)
 	result = (nb % 10) + '0';
 	write(1, &result, 1);
 }
-
+/*
 int main(void)
 {
     ft_putnbr(42);
@@ -45,3 +45,4 @@ int main(void)
 
     return 0;
 }
+	*/
