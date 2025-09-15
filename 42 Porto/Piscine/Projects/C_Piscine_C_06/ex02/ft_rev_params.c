@@ -6,7 +6,7 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:52:18 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/15 13:13:29 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:23:17 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	int	i;
 	int	j;
 
-	i = arcg -1;
+	i = argc -1;
 	while (i > 0)
 	{
 		j = 0;
