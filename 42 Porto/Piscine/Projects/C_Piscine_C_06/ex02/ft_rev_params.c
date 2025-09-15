@@ -6,28 +6,28 @@
 /*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 21:52:18 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/14 21:52:38 by dasantos         ###   ########.fr       */
+/*   Updated: 2025/09/15 13:13:29 by dasantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static void putstrln(char *s)
+int	main(int argc, char **argv)
 {
-    while (*s)
-        write(1, s++, 1);
-    write(1, "\n", 1);
-}
+	int	i;
+	int	j;
 
-int main(int argc, char **argv)
-{
-    int i;
-
-    i = argc - 1;
-    while (i > 0)
-    {
-        putstrln(argv[i]);
-        i--;
-    }
-    return (0);
+	i = arcg -1;
+	while (i > 0)
+	{
+		j = 0;
+		while (argv[i][j])
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		write(1, "\n", 1);
+		i--;
+	}
+	return (0);
 }
