@@ -3,40 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dsilva-c <dsilva-c@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:45:02 by dasantos          #+#    #+#             */
-/*   Updated: 2025/08/30 13:46:48 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/04 12:16:36 by dsilva-c          #+#    #+#             */
+/*   Updated: 2025/09/04 17:37:01 by dsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*#include <stdio.h>*/
+
+char	*ft_strlowcase(char *str);
+
+/*
+int	main(void)
+{
+	char	s[] = "HELLO!";
+	printf("String before: %s\n", s);
+	printf("String after: %s\n", ft_strlowcase(s));
+	return (0);
+}
+*/
 
 char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
+		if (str[i] >= 65 && str[i] <= 90)
 			str[i] += 32;
 		i++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-    char str1[] = "HELLO, WORLD!";
-    char str2[] = "hello, world!";
- 
-    char str4[] = "";
-
-    printf("Result (\"%s\"): %s\n", str1, ft_strlowcase(str1)); 
-    printf("Result (\"%s\"): %s\n", str2, ft_strlowcase(str2)); 
-   
-    printf("Result (\"%s\"): %s\n", str4, ft_strlowcase(str4)); 
-    return 0;
-}
-    */

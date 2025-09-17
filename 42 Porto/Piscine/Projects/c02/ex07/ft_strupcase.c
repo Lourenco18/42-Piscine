@@ -3,38 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dsilva-c <dsilva-c@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:40:09 by dasantos          #+#    #+#             */
-/*   Updated: 2025/08/30 13:42:14 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/04 12:16:36 by dsilva-c          #+#    #+#             */
+/*   Updated: 2025/09/04 17:09:23 by dsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*#include <stdio.h>*/
+
+char	*ft_strupcase(char *str);
+
+/*
+int	main(void)
+{
+	char	s[] = "hello!";
+	printf("String before: %s\n", s);
+	printf("String after: %s\n", ft_strupcase(s));
+	return (0);
+}
+*/
 
 char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 97 && str[i] <= 122)
 			str[i] -= 32;
 		i++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-    char str2[] = "hello, world!";
-    char str3[] = "12345";
-    char str4[] = "";
-
-    printf("Result (\"%s\"): %s\n", str2, ft_strupcase(str2)); 
-    printf("Result (\"%s\"): %s\n", str3, ft_strupcase(str3));
-    printf("Result (\"%s\"): %s\n", str4, ft_strupcase(str4)); 
-    return 0;
-}
-    */

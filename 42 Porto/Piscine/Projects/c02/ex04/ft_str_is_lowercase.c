@@ -3,41 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dsilva-c <dsilva-c@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:24:06 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/12 10:09:57 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/03 21:20:00 by dsilva-c          #+#    #+#             */
+/*   Updated: 2025/09/03 21:39:35 by dsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
-{
-	int	i;
+/*#include <stdio.h>*/
 
-	i = 0;
-	while (str[i] != '\0')
+int	ft_str_is_lowercase(char *str);
+
+/*
+int	main(void)
+{
+	printf("alma: %d\n", ft_str_is_lowercase("alma"));
+	printf("f3l1z: %d\n", ft_str_is_lowercase("f3l1z"));
+	printf(": %d\n", ft_str_is_lowercase(""));
+	return (0);
+}
+*/
+
+int	ft_str_is_lowercase(char *str)
+{
+	while (*str)
 	{
-		if (! (str[i] >= 'a' && str[i] <= 'z'))
-		{
+		if (*str < 'a' || *str > 'z')
 			return (0);
-		}
-		i++;
+		str++;
 	}
 	return (1);
 }
-
-/*
-#include <stdio.h>
-
-
-
-int main(void)
-{
-    printf("Result (\"abc\"): %d\n", ft_str_is_alpha("abc"));      // 1
-    printf("Result (\"ABC\"): %d\n", ft_str_is_alpha("Abc"));      // 0
-    printf("Result (\"abc123\"): %d\n", ft_str_is_alpha("abc123")); // 0
-    printf("Result (\"\"): %d\n", ft_str_is_alpha(""));           // 1
-    printf("Result (NULL): %d\n", ft_str_is_alpha(NULL));         // 1
-    return 0;
-}
-    */

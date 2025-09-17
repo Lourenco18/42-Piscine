@@ -3,39 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dsilva-c <dsilva-c@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:03:34 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/15 09:54:44 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/03 18:14:39 by dsilva-c          #+#    #+#             */
+/*   Updated: 2025/09/04 17:56:09 by dsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>*/
+
+int	ft_str_is_alpha(char *str);
+
+/*
+int	main(void)
+{
+	printf("ola: %d\n", ft_str_is_alpha("ola"));
+	printf("AmaNHA: %d\n", ft_str_is_alpha("AmaNHA"));
+	printf("Hello!: %d\n", ft_str_is_alpha("Hello!"));
+	printf(" : %d\n", ft_str_is_alpha(" "));
+	printf("\\n: %d\n", ft_str_is_alpha("\n"));
+	return (0);
+}
+*/
+
 int	ft_str_is_alpha(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		if (!((str[i] | 32) >= 'a' && (str[i] | 32) <= 'z'))
-		{
+		if (!(*str >= 'A' && *str <= 'Z') && !(*str >= 'a' && *str <= 'z'))
 			return (0);
-		}
-		i++;
+		str++;
 	}
 	return (1);
 }
-/*
-#include <stdio.h>
-
-
-
-int main(void)
-{
-    printf("Result (\"abc\"): %d\n", ft_str_is_alpha("abc"));      // 1
-    printf("Result (\"ABC\"): %d\n", ft_str_is_alpha("ABC"));      // 1
-    printf("Result (\"abc123\"): %d\n", ft_str_is_alpha("abc123")); // 0
-    printf("Result (\"\"): %d\n", ft_str_is_alpha(""));           // 1
-    printf("Result (NULL): %d\n", ft_str_is_alpha(NULL));         // 1
-    return 0;
-}*/

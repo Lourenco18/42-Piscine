@@ -3,37 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasantos <dasantos@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: dsilva-c <dsilva-c@student.42porto.co      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/30 13:30:31 by dasantos          #+#    #+#             */
-/*   Updated: 2025/09/13 13:04:55 by dasantos         ###   ########.fr       */
+/*   Created: 2025/09/03 21:59:22 by dsilva-c          #+#    #+#             */
+/*   Updated: 2025/09/05 11:04:00 by dsilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>*/
+
+int	ft_str_is_printable(char *str);
+
+/*
+int	main(void)
+{
+	printf("02a+CTw]©Š»: %d\n", ft_str_is_printable("02a+CTw]©Š»"));
+	printf("02a+CTw]: %d\n", ft_str_is_printable("02a+CTw]"));
+	printf("©Š»: %d\n", ft_str_is_printable("©Š»"));
+	printf(": %d\n", ft_str_is_printable(""));
+	return (0);
+}
+*/
+
 int	ft_str_is_printable(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		if (str[i] <= 32 || str[i] >= 126)
-		{
+		if (!(*str >= 32 && *str <= 126))
 			return (0);
-			i++;
-		}
+		str++;
 	}
 	return (1);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-    printf("%d\n", ft_str_is_printable("Hello, World!")); // 1
-    printf("%d\n", ft_str_is_printable("Hello\tWorld!"));   // 0
-    printf("%d\n", ft_str_is_printable("Hello\0World!"));   // 0
-    printf("%d\n", ft_str_is_printable(""));                             // 1
-    return 0;
-}
-*/
