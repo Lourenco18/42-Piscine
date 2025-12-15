@@ -1,0 +1,1 @@
+A Piscine na Escola 42 é um intenso processo seletivo de 26 dias (quatro semanas), um bootcamp imersivo de programação onde candidatos "mergulham" no método de aprendizagem colaborativo, gamificado e sem professores da 42, aprendendo os fundamentos de linguagens como C e Shell através de projetos práticos e desafios, para se tornarem alunos efetivos da escola. 
